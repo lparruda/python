@@ -1,14 +1,15 @@
-from flask import Flask
-app = Flask(__name__)
+from setuptools import setup, find_packages
 
-@app.route('/')
-def index():
-    name = "This is route."
-    return name
-@app.route('/hello')
-def hello():
-    name = "Hello world!"
-    return name
+import myproject
 
-if __name__== "__main__":
-    app.run()
+setup(
+    name=myproject.__name__,
+    version=myproject.__version__,
+    url='https://github.com/maet3608/minimal-python-project',
+    author='Author name',
+    author_email='author@gmail.com',
+    description='Template and example for a minimal Python project',
+    packages=find_packages(),
+    install_requires=[],  # e.g. ['numpy >= 1.11.1', 'matplotlib >= 1.5.1']
+)
+

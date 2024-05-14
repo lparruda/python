@@ -10,7 +10,7 @@ name: Python CICD
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "develop" ]
 
 permissions:
   contents: read
